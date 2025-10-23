@@ -24,6 +24,7 @@ Déroulement (durée totale : 4 h)
 
   - Principes de la grille responsive, classes utilitaires, composants de formulaires et modales.
   - Exercices pratiques : construire une page avec Bootstrap (header, main, footer avec une navigation fonctionnelle, pluseurs sections contenant des cards avec des images, un formulaire de contact dans le footer ).
+  - Pages d'apprentissage Bootstrap : créer un fichier nom_eleve_bootstrap.html pour chaque élève (dans le dossier ref).
 
 - 2:40 – 3:30 (50 min) — Mise en ligne d’un site autre que le portfolio
 
@@ -37,10 +38,10 @@ Déroulement (durée totale : 4 h)
 Ressources obligatoires à référencer dans la documentation
 
 - Tutoriel utilisé pour mettre un site en ligne sur github avec screenshot
-- Tuto installation LAMP (exemple fourni) : https://www.youtube.com/watch?v=RpAffaESwyk
+- trouver un Tuto d'installation LAMP resumé les étapes du tuto.
 - Liens vers la documentation Bootstrap et guide Trello (si utilisés).
 
-Livrables en fin de session :
+Objectifs en fin de session :
 
 - Board Trello opérationnel avec tâches attribuées.
 - Exemples Bootstrap (pages/formulaires) dans le dépôt du projet.

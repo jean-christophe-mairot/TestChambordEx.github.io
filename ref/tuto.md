@@ -51,3 +51,30 @@ Notes finales
 
 - Le drag & drop via l’interface web est simple pour des sites statiques. Pour évolutions fréquentes ou équipes, privilégiez Git (commit/push) et workflows (branches, PR).
 - Conserver une copie locale du projet pour développement et sauvegarde.
+
+### Test du site
+
+- Effectuer une batterie de tests pour détecter et corriger les erreurs éventuelles :
+  - Navigation et liens : vérifier que tous les liens internes/externes et les assets (images, CSS, JS) fonctionnent en production (chemins relatifs/absolus).
+  - Responsive : tester sur plusieurs largeurs (desktop, tablette, mobile) et corriger les ruptures de mise en page.
+  - Formulaires : tester la validation HTML5/JS, les messages d’erreur, et l’envoi (côté frontend) ; vérifier les placeholders et labels.
+  - Composants Bootstrap : vérifier le comportement des modals, dropdowns, carrousels, colapses, etc., et corriger les conflits JS/CSS.
+  - Compatibilité navigateurs : tester au minimum Chrome, Firefox et Edge (et Safari si possible).
+  - Accessibilité basique : vérifier textes alternatifs, ordre de tabulation, labels pour les champs de formulaire et contraste des couleurs.
+  - Performances : vérifier le poids des images, minification des fichiers CSS/JS et temps de chargement de pages critiques.
+  - Tests JavaScript : vérifier les fonctions interactives, la gestion des erreurs JS et l’absence d’exceptions dans la console.
+  - Déploiement LAMP / GitHub : tester l’affichage et les liens une fois déployés sur la machine Linux et sur GitHub Pages (ou dépôt public).
+- Procédure de remontée et correction des bugs :
+  - Créer une carte/issue par anomalie dans Trello/GitHub avec : titre, description, étapes pour reproduire, capture d’écran et priorité.
+  - Répartir les tâches de correction, indiquer l’auteur de la correction et estimer la durée.
+  - Faire des commits atomiques avec messages explicites et référencer la carte/issue (ex. "Fix formulaire contact — résout #12").
+  - Tester la correction sur la branche avant fusion/push en production.
+- Checklist de validation (à cocher une fois testé) :
+  - [ ] Tous les liens et assets fonctionnent en production
+  - [ ] Responsive validé sur 3 tailles
+  - [ ] Formulaires testés et messages d’erreur cohérents
+  - [ ] Composants Bootstrap opérationnels
+  - [ ] Tests navigateurs effectués
+  - [ ] Contrôles d’accessibilité de base passés
+  - [ ] Déploiement sur Linux et GitHub vérifié
+- Remettre un rapport de tests synthétique dans la documentation (liste des bugs trouvés/corrigés, captures d’écran, étapes manquantes).

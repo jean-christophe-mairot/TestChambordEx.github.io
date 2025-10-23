@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recrutement</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/recrutement.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Recrutement</h1>
+    </header>
+    <main>
+      <!-- présentation -->
+      <section class="intro">
+        <h2>Rejoignez notre équipe</h2>
+        <p>
+          Nous sommes toujours à la recherche de nouveaux talents pour rejoindre
+          notre équipe à l'hôtel Chambord. Si vous êtes passionné(e) par
+          l'hôtellerie et que vous souhaitez travailler dans un cadre
+          exceptionnel, consultez nos offres d'emploi ci-dessous.
+        </p>
+      </section>
+      <!-- Offre d'emploi : Chef de Cuisine -->
+      <section class="job-offer">
+        <h2>Commis de Cuisine</h2>
+        <p>
+          <strong>Description du poste :</strong> Nous recherchons un(e) commis
+          de cuisine motivé(e) pour rejoindre notre équipe. Vous serez en charge
+          de la préparation des ingrédients, de l'entretien de la cuisine et de
+          l'assistance au chef.
+        </p>
+        <p>
+          <strong>Profil recherché :</strong> Dynamique, organisé(e) et
+          passionné(e) par la cuisine.
+        </p>
+        <p><strong>Lieu :</strong> Chambord</p>
+        <p><strong>Contact :</strong> recrutement@chambord.fr</p>
+      </section>
+      <!-- Offre d'emploi : Agent d'Accueil -->
+      <section class="job-offer">
+        <h2>Agent d'Accueil</h2>
+        <p>
+          <strong>Description du poste :</strong> Nous recherchons un(e) agent
+          d'accueil pour accueillir les visiteurs, fournir des informations et
+          assurer une expérience agréable.
+        </p>
+        <p>
+          <strong>Profil recherché :</strong> Sourire, sens du contact et
+          maîtrise du français et de l'anglais.
+        </p>
+        <p><strong>Lieu :</strong> Chambord</p>
+        <p><strong>Contact :</strong> recrutement@chambord.fr</p>
+      </section>
+      <!-- Offre d'emploi : Femme de Chambre -->
+      <section class="job-offer">
+        <h2>Femme de Chambre</h2>
+        <p>
+          <strong>Description du poste :</strong> Nous recherchons une femme de
+          chambre pour assurer la propreté et l'entretien des chambres de
+          l'hôtel.
+        </p>
+        <p>
+          <strong>Profil recherché :</strong> Sens de l'organisation, rigueur et
+          discrétion.
+        </p>
+        <p><strong>Lieu :</strong> Chambord</p>
+        <p><strong>Contact :</strong> recrutement@chambord.fr</p>
+      </section>
+      <!-- Formulaire de candidature -->
+      <section class="application-form">
+        <h2>Postuler</h2>
+        <form action="submit_recrutement.php" method="post">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" required />
+          <label for="surname">Prénom :</label>
+          <input type="text" id="surname" name="surname" required />
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required />
+          <label for="cv">CV (PDF) :</label>
+          <input type="file" id="cv" name="cv" accept=".pdf" required />
+          <input
+            type="file"
+            id="motivation_letter"
+            name="motivation_letter"
+            accept=".pdf"
+            required
+          />
+          <button type="submit">Envoyer ma candidature</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p class="text-center">
+        &copy; 2023 Hôtel Chambord. Tous droits réservés.
+        <br />
+        <em class="avertissement-text"
+          >Attention ce site n'est pas à but commerciale. Il est uniquement
+          destiné à des fins d'apprentissage.</em
+        >
+      </p>
+    </footer>
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>

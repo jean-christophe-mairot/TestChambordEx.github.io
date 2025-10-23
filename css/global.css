@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+/* bandeau-bg */
+.bandeau-bg {
+  background-image: url("../img/chateau-2.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem 0;
+  z-index: 1;
+  height: 88vh;
+}
+/* bandeau-bg-chambres */
+.bandeau-bg-chambres {
+  background-image: url("../img/chambre-1.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem 0;
+  z-index: 1;
+  height: 88vh;
+}
+/* bandeau-bg-restaurant */
+.bandeau-bg-restaurant {
+  background-image: url("../img/salle_restaurant.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem 0;
+  z-index: 1;
+  height: 88vh;
+}
+/* bandeau-bg-SPA */
+.bandeau-bg-SPA {
+  background-image: url("../img/spa.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem 0;
+  z-index: 1;
+  height: 88vh;
+}
+/* bandeau-bg-activites */
+.bandeau-bg-activites {
+  background-image: url("../img/mongolfiere-2.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem 0;
+  z-index: 1;
+  height: 88vh;
+}
+/* bandeau-bg-checkin */
+.bandeau-bg-checkin {
+  background-image: url("../img/check-in.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem 0;
+  z-index: 1;
+  height: 88vh;
+}
+/* Logo  */
+.logo {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+/* Navbar */
+.width-800 {
+  max-width: 800px;
+}
+/* placement perso card */
+.reverse-order {
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 768px) {
+  .reverse-order {
+    flex-direction: row;
+  }
+}
+/* transition des sections */
+section {
+  /* fait entrer les articles par la gauche */
+  transform: translatey(40%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 1.2s;
+  will-change: transform, opacity;
+}
+
+section.fade-in {
+  transform: translatey(0);
+  opacity: 1;
+}
+/* footer */
+.avertissement-text {
+  color: #555;
+  margin-top: 10px;
+  font-size: 0.7em;
+}
+/* Test */
+.test {
+  border: red 1px solid;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion Restaurant - Piscine</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background-color: #0078d7;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      .container {
+        padding: 2rem;
+        text-align: center;
+      }
+      .pool {
+        margin: 2rem auto;
+        width: 300px;
+        height: 150px;
+        background-color: #00bfff;
+        border: 5px solid #0078d7;
+        border-radius: 15px;
+        position: relative;
+      }
+      .pool::after {
+        content: "Piscine";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Gestion Restaurant - Piscine</h1>
+    </header>
+    <div class="container">
+      <p>Bienvenue sur la page de gestion du restaurant avec piscine.</p>
+      <div class="pool"></div>
+    </div>
+  </body>
+</html>

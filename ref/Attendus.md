@@ -35,18 +35,53 @@ Préparation du frontend pour le backend
 
 ---
 
-1 formations :
+Pour les enseignants :
+Les élèves n'ont pas la durée de l'AP ils devront l'évaluer à la fin de la deuxièmes scéance. l'ap est décomposée en plusieurs parties. Le client à pris contact, il a un site frontend fait en html, CSS, JS et bootstrap. Il nous donnera son site lors de la deuxième période d'AP.
+
+1. formations : (4 heures) la dernière demi heure ils font la documentation
 
 - Ce former à utiliser Trello (gestion de projet : création de compte, attribution de taches)
 - Ce former à manipuler bootstrap ()
--
+- mettre un autre site que son portfolio en ligne.(cherchez sur youtube un tuto et mettre le lien dans la documentation)
 
-1 correction du site :
+installation d'un serveur lamp : https://www.youtube.com/watch?v=RpAffaESwyk
+
+---
+
+2. corrections du site et mise en place de trello :
+
+TRELLO :
+
+- Etablir les rôles de chacun (chef de projet, reférent SLAM, référent SISR)
+- Evaluer ensemble les tâches à produire
+- Répartition des tâches
+- un diagramme de gant doit êtres intégré à la documentation (évaluation des durées des tâches par personne sur la durée de l'AP )
+
+CORRECTIONS :
 
 - Changer les temoignages de la page d'index mettre les bon commentaires
 - correction du chemin des images pour que cela fonctionne en production supprimer ../img/...jpg par img/...jpg
 
-elements dans la doc remise au client en fin de développemt
+3. faire les pages (regarder la maquette dans le dossier ref de l'AP3)
 
-- restitution du site dans son ensemble au format Zip
+- Page Réservations lié aux boutons de la page chambre, SPA, Restaurant.
+- Page de connexion : faire une proposition qui correspond au design global du site. il doit ajouter un lien dans la navigation (exemple : une icône).
+- Page de recrutements : faire une proposition qui correspond au design global du site. De la page contact on accéde à la page recrutements.
+- Page Activitées :
+- Sur la page Avis rajouter le formulaire pour laisser les avis (non fonctionnel)
+- vos pages d'apprentissage de bootstrap (dans le dossier ref : nom_eleve_bootstrap.html (pour chaque élève une page))
+
+4. Installation linux :
+
+- création d'une clef de boot
+- installation de la machine linux (validation par l'enseignant)
+- faire la documentation pas à pas de l'installation pour le client
+- faire un tuto d'une création d'une session sous linux (interface et lignes de commandes)
+- mise en place d'un server web sur machine linux (serveur Lamp)
+- faire le tuto d'installation du server lamp
+
+Elements dans la doc remise au client en fin de développement
+
+- restitution du site dans son ensemble au format Zip (garder l'architecture de départ) (AP3_nomEleve1_nomEleve2_nomEleve3.zip)
+- mise en production sur github (chaque élève doit le faire sur github et mettre le lien dans la documentation globale)
 - documentation globale du projet (gestion de projet, site web, installation d'une machine linux, configuration d'un server web, mise en production du site (sur github de chaque élève))

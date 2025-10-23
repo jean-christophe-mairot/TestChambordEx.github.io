@@ -44,9 +44,9 @@ Préparation du frontend pour le backend
 1 correction du site :
 
 - Changer les temoignages de la page d'index mettre les bon commentaires
--
+- correction du chemin des images pour que cela fonctionne en production supprimer ../img/...jpg par img/...jpg
 
-element dans la doc remise au client en fin de développemt
+elements dans la doc remise au client en fin de développemt
 
 - restitution du site dans son ensemble au format Zip
 - documentation globale du projet (gestion de projet, site web, installation d'une machine linux, configuration d'un server web, mise en production du site (sur github de chaque élève))

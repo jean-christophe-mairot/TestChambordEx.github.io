@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" href="../img/logo_Hotel_Chambord-ico.png" />
+    <title>
+      HOTEL CHAMBORD | Activités et loisirs sur le domaine et aux alentours
+    </title>
+  </head>
+  <body>
+    <!-- Header avec le logo et le menu de navigation -->
+    <header class="">
+      <div class="bandeau-bg-activites"></div>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"
+          ><img src="../img/logo_Hotel_Chambord-all.png" alt="" class="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse width-800"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../index.html"
+                >Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="chambres.html">Chambres</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="restaurant.html">Restaurant</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="spa.html">Spa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="avis.html">Avis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" method="get">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Rechercher"
+              aria-label="Search"
+            />
+            <button class="search-item btn" type="submit" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <main class="container mt-5">
+      <h1 class="text-center mb-4">Gestion des utilisateurs et services</h1>
+
+      <!-- Formulaire d'ajout -->
+      <div class="card mb-4">
+        <div class="card-header">Ajouter un compte ou un service</div>
+        <div class="card-body">
+          <form id="addForm">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">Prénom</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Nom</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  required
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Mot de passe</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="role" class="form-label">Rôle</label>
+              <select class="form-select" id="role" required>
+                <option value="client">Client</option>
+                <option value="admin">Administrateur</option>
+                <option value="service">Service</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Liste des comptes et services -->
+      <div class="card">
+        <div class="card-header">Liste des comptes et services</div>
+        <div class="card-body">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="search"
+              placeholder="Rechercher..."
+            />
+          </div>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Rôle</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="userList">
+              <tr>
+                <td>Dupont</td>
+                <td>Jean</td>
+                <td>jean.dupont@example.com</td>
+                <td>Client</td>
+                <td>
+                  <button class="btn btn-warning btn-sm">Modifier</button>
+                  <button class="btn btn-danger btn-sm">Supprimer</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Martin</td>
+                <td>Claire</td>
+                <td>claire.martin@example.com</td>
+                <td>Administrateur</td>
+                <td>
+                  <button class="btn btn-warning btn-sm">Modifier</button>
+                  <button class="btn btn-danger btn-sm">Supprimer</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Durand</td>
+                <td>Paul</td>
+                <td>paul.durand@hotel.com</td>
+                <td>Service - Hôtel</td>
+                <td>
+                  <button class="btn btn-warning btn-sm">Modifier</button>
+                  <button class="btn btn-danger btn-sm">Supprimer</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Lemoine</td>
+                <td>Sophie</td>
+                <td>sophie.lemoine@restaurant.com</td>
+                <td>Service - Restaurant</td>
+                <td>
+                  <button class="btn btn-warning btn-sm">Modifier</button>
+                  <button class="btn btn-danger btn-sm">Supprimer</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Bernard</td>
+                <td>Julie</td>
+                <td>julie.bernard@spa.com</td>
+                <td>Service - Spa</td>
+                <td>
+                  <button class="btn btn-warning btn-sm">Modifier</button>
+                  <button class="btn btn-danger btn-sm">Supprimer</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+      <p class="text-center">
+        &copy; 2023 Hôtel Chambord. Tous droits réservés.
+        <br />
+        <em class="avertissement-text"
+          >Attention ce site n'est pas à but commercial. Il est uniquement
+          destiné à des fins d'apprentissage.</em
+        >
+      </p>
+    </footer>
+    <!-- script javascript -->
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

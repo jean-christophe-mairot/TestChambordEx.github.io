@@ -3,52 +3,313 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestion Restaurant - Piscine</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-      header {
-        background-color: #0078d7;
-        color: white;
-        padding: 1rem;
-        text-align: center;
-      }
-      .container {
-        padding: 2rem;
-        text-align: center;
-      }
-      .pool {
-        margin: 2rem auto;
-        width: 300px;
-        height: 150px;
-        background-color: #00bfff;
-        border: 5px solid #0078d7;
-        border-radius: 15px;
-        position: relative;
-      }
-      .pool::after {
-        content: "Piscine";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1.5rem;
-        color: white;
-        font-weight: bold;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" href="../img/logo_Hotel_Chambord-ico.png" />
+    <title>
+      HOTEL CHAMBORD | Activités et loisirs sur le domaine et aux alentours
+    </title>
   </head>
   <body>
-    <header>
-      <h1>Gestion Restaurant - Piscine</h1>
+    <!-- Header avec le logo et le menu de navigation -->
+    <header class="">
+      <div class="bandeau-bg-activites"></div>
     </header>
-    <div class="container">
-      <p>Bienvenue sur la page de gestion du restaurant avec piscine.</p>
-      <div class="pool"></div>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"
+          ><img src="../img/logo_Hotel_Chambord-all.png" alt="" class="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse width-800"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../index.html"
+                >Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="chambres.html">Chambres</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="restaurant.html">Restaurant</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="spa.html">Spa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="avis.html">Avis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" method="get">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Rechercher"
+              aria-label="Search"
+            />
+            <button class="search-item btn" type="submit" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <main class="container my-4">
+      <section>
+        <h2 class="mb-4">Gestion des Recettes</h2>
+
+        <form id="recipe-form" class="mb-4">
+          <div class="mb-3">
+            <label for="recipe-name" class="form-label"
+              >Nom de la recette</label
+            >
+            <input
+              type="text"
+              id="recipe-name"
+              class="form-control"
+              placeholder="Entrez le nom de la recette"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="recipe-ingredients" class="form-label"
+              >Ingrédients</label
+            >
+            <textarea
+              id="recipe-ingredients"
+              class="form-control"
+              rows="3"
+              placeholder="Listez les ingrédients"
+              required
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="recipe-steps" class="form-label">Étapes</label>
+            <textarea
+              id="recipe-steps"
+              class="form-control"
+              rows="5"
+              placeholder="Décrivez les étapes de préparation"
+              required
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="recipe-image" class="form-label"
+              >Image du dressage</label
+            >
+            <input
+              type="file"
+              id="recipe-image"
+              class="form-control"
+              accept="image/*"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Ajouter la recette
+          </button>
+        </form>
+        <!-- liste des recettes -->
+        <h3 class="mb-3">Liste des Recettes</h3>
+        <div class="row">
+          <!-- Recette 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="../img/salade-cesar.jpg"
+                class="card-img-top"
+                alt="Recette 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Salade César</h5>
+                <p class="card-text">
+                  <strong>Ingrédients :</strong><br />
+                  - 200g de laitue<br />
+                  - 100g de poulet grillé<br />
+                  - 50g de parmesan
+                </p>
+                <div class="accordion" id="accordionRecette1">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingRecette1">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseRecette1"
+                        aria-expanded="false"
+                        aria-controls="collapseRecette1"
+                      >
+                        Étapes
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseRecette1"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingRecette1"
+                      data-bs-parent="#accordionRecette1"
+                    >
+                      <div class="accordion-body">
+                        1. Laver et couper la laitue.<br />
+                        2. Ajouter le poulet grillé et le parmesan.<br />
+                        3. Assaisonner avec la sauce César.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <button class="btn btn-warning me-2">Modifier</button>
+                  <button class="btn btn-danger">Supprimer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recette 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="../img/salade-cesar.jpg"
+                class="card-img-top"
+                alt="Recette 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Salade César</h5>
+                <p class="card-text">
+                  <strong>Ingrédients :</strong><br />
+                  - 200g de laitue<br />
+                  - 100g de poulet grillé<br />
+                  - 50g de parmesan
+                </p>
+                <div class="accordion" id="accordionRecette1">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingRecette1">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseRecette1"
+                        aria-expanded="false"
+                        aria-controls="collapseRecette1"
+                      >
+                        Étapes
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseRecette1"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingRecette1"
+                      data-bs-parent="#accordionRecette1"
+                    >
+                      <div class="accordion-body">
+                        1. Laver et couper la laitue.<br />
+                        2. Ajouter le poulet grillé et le parmesan.<br />
+                        3. Assaisonner avec la sauce César.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <button class="btn btn-warning me-2">Modifier</button>
+                  <button class="btn btn-danger">Supprimer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recette 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="../img/salade-cesar.jpg"
+                class="card-img-top"
+                alt="Recette 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Salade César</h5>
+                <p class="card-text">
+                  <strong>Ingrédients :</strong><br />
+                  - 200g de laitue<br />
+                  - 100g de poulet grillé<br />
+                  - 50g de parmesan
+                </p>
+                <div class="accordion" id="accordionRecette1">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingRecette1">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseRecette1"
+                        aria-expanded="false"
+                        aria-controls="collapseRecette1"
+                      >
+                        Étapes
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseRecette1"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingRecette1"
+                      data-bs-parent="#accordionRecette1"
+                    >
+                      <div class="accordion-body">
+                        1. Laver et couper la laitue.<br />
+                        2. Ajouter le poulet grillé et le parmesan.<br />
+                        3. Assaisonner avec la sauce César.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <button class="btn btn-warning me-2">Modifier</button>
+                  <button class="btn btn-danger">Supprimer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- section : footer -->
+    <footer class="mt-5 shadow pt-5">
+      <p class="text-center">
+        &copy; 2023 Hôtel Chambord. Tous droits réservés.
+        <br />
+        <em class="avertissement-text"
+          >Attention ce site n'est pas à but commercial. Il est uniquement
+          destiné à des fins d'apprentissage.</em
+        >
+      </p>
+    </footer>
+
+    <!-- script javascript -->
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
